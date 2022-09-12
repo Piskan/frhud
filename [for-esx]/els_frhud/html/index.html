@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+
+<style>
+    body {
+    background-color: transparent !important;
+    overflow: hidden; /* Hide scrollbars */
+}
+    .rightplayerstatus{
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+        /* width: 300px;
+        height: 150px; */
+        /* background-color: red; */
+        perspective: 700px;
+      
+   
+    }
+    .deneme
+    {
+        display: block;
+        width: 200px;
+        height: 150px;
+        /* border: 4px solid gray;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray; */
+        clear: both;
+         padding: 0 2px;
+        transition: transform 1s;
+     transform: translateX(0) rotateY(-15deg) rotateZ(4deg) scale(1.0);
+    }
+    
+    .progressclass {
+        display: flex;
+        float: right;
+        width: 70px;
+        height: 14px;
+        margin-bottom: 0.5px;
+        transform: rotate(-180deg);
+        border-left: 2px solid #3686bc;
+        /* margin-right: 5px; */
+    }
+    .progressclass2 {
+       display: flex;
+        /* float: right; */
+        width: 70px;
+        float: right;
+        height: 14px;
+        margin-bottom: 0.5px;
+        transform: rotate(-180deg);
+        border-left: 1px solid #d4d8db;
+        /* clear: both; */
+    }
+
+    .progressclasszirh {
+        display: flex;
+        float: right;
+        width: 198px;
+        height: 14px;
+        margin-bottom: 1px;
+        transform: rotate(-180deg);
+        border-left: 2px solid #3686bc;
+        /* clear: both; */
+    }
+    .progressclass3 {
+        display: flex;
+        float: right;
+        width: 198px;
+        height: 14px;
+        margin-bottom: 1px;
+        transform: rotate(-180deg);
+        
+        border-left: 2px solid #3686bc;
+        /* clear: both; */
+    }
+
+    .progressclass4 {
+        display: flex;
+        float: right;
+        width: 198px;
+        height: 14px;
+        margin-bottom:1px;
+        transform: rotate(-180deg);
+        border-left: 2px solid #3686bc;
+        /* clear: both; */
+    }
+    .progressclass5 {
+        display: flex;
+        float: right;
+        width: 198px;
+        height: 14px;
+        margin-bottom: 1px;
+        transform: rotate(-180deg);
+        border-left: 2px solid #3686bc;
+        /* clear: both; */
+    }
+
+    .progressclass6 {
+        display: flex;
+        float: right;
+        width: 70px;
+        height: 14px;
+        margin-bottom: 0.3px;
+        transform: rotate(-180deg);
+        border-left: 2px solid #3686bc;
+        /* clear: both; */
+    }
+    
+    .icons{
+        position: absolute;
+        font-size: 10px;
+        color: white;
+        left: 3px;
+        margin-top: 1px;
+        font-weight: 600;
+        transform: rotate(180deg);
+    }
+
+    .icons2{
+        position: absolute;
+        font-size: 10px;
+        color: white;
+        left: 3px;
+        margin-top: 1px;
+        font-weight: 600;
+        transform: rotate(180deg);
+    }
+
+    .icons3{
+        position: absolute;
+        font-size: 10px;
+        color: white;
+        left: 3px;
+        margin-top: 1px;
+        font-weight: 600;
+        transform: rotate(180deg);
+    }
+
+    .icons4{
+        position: absolute;
+        font-size: 10px;
+        color: white;
+        left: 3px;
+        margin-top: 1px;
+        font-weight: 600;
+        z-index: 1;
+        transform: rotate(180deg);
+    }
+    .icons5{
+        position: absolute;
+        font-size: 10px;
+        color: white;
+        left: 3px;
+        margin-top:1px;
+        font-weight: 600;
+        z-index: 1;
+        transform: rotate(180deg);
+    }
+    .icons6{
+        position: absolute;
+        font-size: 10px;
+        color: white;
+        left: 3px;
+        margin-top: 1px;
+        font-weight: 600;
+        z-index: 1;
+        transform: rotate(180deg);
+    }
+    .icons7{
+        position: absolute;
+        font-size: 10px;
+        color: white;
+        left: 3px;
+        margin-top: 1px;
+        font-weight: 600;
+        z-index: 1;
+        transform: rotate(180deg);
+
+    }
+
+
+
+    .gunmain{
+        position: absolute;
+        right: 50px;
+        bottom: 250px;
+        width: 220px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.471);
+        /* border: 1px solid rgba(111, 110, 110, 0.741); */
+        z-index: 1;
+    }
+
+
+
+    .weaponprogressbar{
+        position: absolute;
+        font-size: 10px;
+        color: white;
+        /* left: 3px; */
+         bottom: -7px;
+        font-weight: 600;
+        transform: rotate(180deg);
+        z-index: 2;
+    }
+
+    .weaponimg{
+        position: absolute; 
+        left: -20px;
+        top: -2px;
+        transform: scaleX(-1);
+    }
+    .weapontexts{
+        position: absolute; 
+        right: 35px;
+        top: 7px;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        color: white;
+    }
+
+    .weapontexts2{
+        position: absolute; 
+        right: 10px;
+        bottom: 3px;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        color: white;
+        font-size: 9px;
+        color: rgb(205, 195, 185);
+    }
+
+    /* ----------------------------------------------- Vehicle Staffsss -------------------------------------------------------------------------------------- */
+
+    .vehiclemain{
+        position: absolute;
+        bottom: 5px;
+        left: 43.5%;
+        width: 300px;
+        height: 90px;
+        border-radius: 2px;
+        background: linear-gradient(-30deg, #EA5BDB, #54AEFE,#EA5BDB,#54affe1e, #54affe00, #23d5ab00);
+	background-size: 400% 400%;
+	animation: gradient 3s ease-in-out;
+	/* height: 100vh; */
+    display: none;
+    z-index: 3;
+    font-family: 'Montserrat';
+        font-weight: 600;
+         color: rgba(255, 255, 255, 0.653);
+         font-size: 20px;
+         z-index: 50;
+   
+         text-align: center;
+    }
+
+
+    @keyframes gradient {
+	0% {
+		background-position: 0% 10%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+   }
+
+   .vehiclemainreel{
+        position: absolute;
+        bottom: 20px;
+        left: 45%;
+        width: 250px;
+        height: 60px;
+        border-radius: 2px;
+        background-color: rgba(0, 0, 0, 0.705);
+        display: none;
+      
+    }
+    .vehiclefuel{
+        position: absolute;
+        top: 7px;
+        right: 20px;
+
+
+
+        /* background-color: red; */
+    }
+    #fulepro{
+        position: absolute;
+        /* margin-top: -5px;ö */
+        right: -11px;
+        top: 9px;
+        width: 40px;
+        height: 2.5px;
+       /* transform: rotate(-0.1deg); */
+       border-radius: 23px;
+    }
+    #fulepro svg {
+  height: 100%;
+  width: 100%;
+  border-radius: 23px;
+}
+
+
+    .vehiclebelt{
+        position: absolute;
+        top: 37px;
+        right: 22px;
+
+
+
+        /* background-color: red; */
+    }
+
+    .vehiclekph{
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        width: 25px;
+        /* background-color: red; */
+        /* display: block; */
+  
+        color:white;
+    }
+    .vehiclekmain{
+        position: absolute;
+        top: 1px;
+        right: 100px;
+         font-weight:600;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         color: white;
+    }
+    .vehiclegear{
+        position: absolute;
+        top: 1px;
+        left: 60px;
+         font-weight:600;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         color: white;
+    }
+    
+
+    .vehiclelock{
+        position: absolute;
+        top: 10px;
+        left: 22px;
+    }
+
+    .vehiclecurs{
+        position: absolute;
+        top: 37px;
+        left: 22px;
+    }
+
+    .vehicletime{
+        position: absolute;
+        top: -23px;
+        padding: 3px 20px;
+        border-radius: 2px;
+        background-color: rgba(0, 0, 0, 0.678);
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 13px;
+    }
+
+    .vehicleothericons{
+        position: absolute;
+        top: -27px;
+        left: 60px;
+        padding: 3px 20px;
+        border-radius: 2px;
+        /* background-color: rgba(0, 0, 0, 0.678); */
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 13px;
+    }
+
+    .vehiclelowerpart{
+        position: absolute;
+        bottom: -14px;
+        width: 250px;
+        height: 15px;
+        background-color: rgba(102, 106, 102, 0.619);
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        border-top: 2px solid rgba(119, 117, 117, 0.346);
+
+        z-index: 2;
+      
+    }
+
+
+    .vehiclerpm{
+        position: absolute;
+
+        width: 250px;
+        height: 5px;
+        bottom: -5px;
+        z-index: 40;
+    
+    }
+
+
+    .frhudprogressbarmain{
+     position: absolute;
+     bottom: 150px;
+     left: 43%;
+     width: 400px;
+     height: 65px;
+     border-radius: 2px;
+     background-color: rgba(0, 0, 0, 0.57);
+     border: 1px solid rgb(66, 64, 64);
+     display: none;
+    }
+
+    .frhudprogresstext{
+        position: absolute;
+        top: 12px;
+        left: 13px;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        color: white;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+    .frhudproggressimiz{
+        position: absolute;
+        top: 35px;
+        left: 10px;
+        width: 370px;
+        height: 20px;
+    }
+
+    #whatisthisprogres{
+        border-radius: 23px;
+    }
+
+    #whatisthisprogres svg {
+
+    border-radius: 23px;
+    }
+
+
+    .notifymenu{
+        position: absolute;
+        top: 20px;
+        width: 400px;
+        /* height: 300px; */
+        right: 20px;
+        /* background-color: red; */
+        flex-direction: column;
+        display: flex;
+    }
+    .notfiy{
+        position: relative;
+        /* display: flex; */
+        width: 300px;
+        height: 60px;
+        /* padding: 30px 5px; */
+        background-color: rgba(0, 0, 0, 0.755);
+        margin: 10px auto;
+        /* margin-bottom: 10px; */
+        border-radius: 2px;
+        border-left: 5px solid transparent;
+        border-image: linear-gradient(90deg, rgba(190,36,176,0.6811099439775911) 34%, rgba(33,230,211,0.6166841736694677) 67%);
+        border-image-slice: 1;
+        animation-name: slideInRight;
+         animation-duration: 1s;
+        animation-iteration-count: 1;
+        /* flex-direction: column; */
+    }
+    .notfiyicon{
+      position: absolute;
+      font-size: 30px;
+      top: 15px;
+      left: 25px;
+      color: #ddcfdd93;
+      
+    }
+
+    .notfiytext{
+        position: absolute;
+        /* background-color: #d4d8db; */
+        left: 60px;
+        top: 12px;
+       width: 200px;
+       height: 40px;
+       font-size: 11px;
+       font-weight: 600;
+       font-family: 'Montserrat';
+       color: rgba(244, 239, 239, 0.716);
+       word-wrap: normal;
+       word-wrap: break-word;
+    }
+
+    .success{
+        border-left: 5px solid transparent;
+        border-image: linear-gradient(90deg, rgba(38, 190, 36, 0.681) 34%, rgba(33, 230, 108, 0.617) 67%);
+        border-image-slice: 1;
+    }
+
+    .error{
+        border-left: 5px solid transparent;
+        border-image: linear-gradient(90deg, rgba(190, 82, 36, 0.681) 34%, rgba(201, 28, 8, 0.617) 67%);
+        border-image-slice: 1;
+    }
+
+    .inform{
+        border-left: 5px solid transparent;
+        border-image: linear-gradient(90deg, rgba(190,36,176,0.6811099439775911) 34%, rgba(33,230,211,0.6166841736694677) 67%);
+        border-image-slice: 1;
+    }
+    
+    @keyframes slideInRight {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+</style>
+
+<body>
+    <div class="rightplayerstatus" style="display: none;">
+           <div class="deneme">
+               <div class="progressclass" id="trythis"><div class="icons" ><span style="margin-right: 5px; font-size: 11px;" id="tabiid">122</span><i class="fas fa-hashtag"></i></div></div>
+               <div class="progressclass2" id="trythis2"><div class="icons2" ><span style="margin-right: 5px; font-size: 11px;" id="energyid">100</span><i class="fas fa-bolt"></i></div></div>
+               <div class="progressclass3" id="trythis3"><div class="icons3" ><span style="margin-right: 5px; font-size: 11px;" id="tabihearth">100</span><i class="fas fa-heart"></i></div></div>
+               <div class="progressclasszirh" id="trythiszirh"><div class="icons7" ><span style="margin-right: 5px; font-size: 11px;" id="tabishield">100</span><i class="fas fa-shield-alt"></i></div></div>
+               <div class="progressclass4" id="trythis4"><div class="icons4" ><span style="margin-right: 5px; font-size: 11px;" id="tabiburger">100</span><i class="fas fa-hamburger"></i></div></div>
+               <div class="progressclass5" id="trythis5"><div class="icons5" ><span style="margin-right: 5px; font-size: 11px;" id="tabiwater">100</span><i class="fas fa-water"></i></div></div>
+               <div class="progressclass6" id="trythis6"><div class="icons6" ><span style="margin-right: 5px; font-size: 11px;">100</span><i class="fas fa-volume-up"></i></div></div>
+
+           </div>
+    </div>
+
+
+    <div class="gunmain" style="display: none;">
+        <div class="weaponimg"><img src="weaponicons/WEAPON_ASSAULTRIFLE_MK2.png" alt="" width="60px" id="weaponimageidmi"></div>
+        <div class="weaponprogressbar"><div id="weaponprog"></div></div>
+        <div class="weapontexts"><span style="font-size:21px"><span id="weaponbullets">60</span><span style="font-size: 11px; color: rgb(205, 195, 185); font-weight: 600;" >/</span></span><span style="font-size: 15px;font-weight: 600; margin-left: 5px; color: rgb(174, 174, 174);" id="weaponbulletsmax">190</span></div> 
+        <div class="weapontexts2">Durability:<span style="margin-left: 3px;">100</span></div> 
+    </div>
+
+
+    <div class="vehiclemain"><span style="text-align: center; text-transform: uppercase; display: none; margin-top: 35px;" id="helpmanb">Sultan Rs</span></div>
+    <div class="vehiclemainreel">
+        <div class="vehiclefuel">
+            <img src="vehicleicons/fuel.svg" alt="" style="width: 15px;">
+             <div id="fulepro"></div>
+        </div>
+
+        <div class="vehiclebelt"> <img src="vehicleicons/belt.svg" alt="" style="width: 15px;" id="beltid"></div>
+        <div class="vehiclekph"><span style="text-align: center;font-size: 11px; font-family: 'Montserrat'; font-weight: 600; display: flex; float: center; margin-left: 7px;" id="vitestype">2</span><span style="font-size: 10px; font-family: 'Montserrat'; font-weight: 500; color: #d4d8db;display: flex; ">KPH</span></div>
+        <div class="vehiclekmain"><span style="font-size:40px;" id="vehiclekmhid">50</span></div>
+        <div class="vehiclegear"><span style="font-size:40px;   color: rgba(255, 255, 255, 0.419);" id="bunevites">S</span></div>
+        <div class="vehiclelock"><img src="vehicleicons/locker.svg" alt="" style="width: 15px;" id="lockerid"></div>
+        <div class="vehiclecurs"><img src="vehicleicons/indicator.svg" alt="" style="width: 15px;" id="indicatorid"></div>
+        <div class="vehicletime">00:15</div>
+        <div class="vehicleothericons"><img src="vehicleicons/warning.svg" alt="" style="width: 19px; margin-right: 10px;" id="headlightid"><img src="vehicleicons/tyre.svg" alt="" style="width: 17px; margin-right: 10px;" id="tyreid"><img src="vehicleicons/crash.svg" alt="" style="width: 19px;" id="crashid"></div>
+        <div class="vehiclelowerpart"><span id="streetball" style="font-size: 10px; font-weight: 550; color: white; font-family: 'Montserrat'; float: center; display: block; text-align: center;">Adanali Nevzatasdsadasdas Caddesi</span></div>
+        <div class="vehiclerpm"><div id ="vehiclerpom"></div></div>
+    </div>
+
+    <div class="frhudprogressbarmain">
+        <div class="frhudprogresstext">Using Water...</div>
+        <div class="frhudproggressimiz"><div id = "whatisthisprogres"></div></div>
+    </div>
+
+
+    <div class="notifymenu">
+        <!-- <div class="notfiy">
+            <div class="notfiyicon"><i class="fas fa-info-circle"></i></div>
+            <div class="notfiytext"><span style="text-align: center; display:block; margin-top: 10px;">Hello guy how you doing</span></div>
+           
+        </div> -->
+        <!-- <div class="notfiy"></div> -->
+
+    </div>
+    
+</body>
+<script src="progressbar.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+<script>
+    var Gradient = '<defs><linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#54AEFE"/><stop offset="50%" stop-color="#EA5BDB"/><stop offset="100%" stop-color="#EA5BDB"/></linearGradient></defs>';
+  bar = new ProgressBar.Line(trythis, {
+      strokeWidth: 4,
+      easing: 'linear',
+      duration: 50,
+      color: 'url(#gradient)',
+      trailColor: 'rgba(0, 0, 0, 0.271)',
+      trailWidth: 4,
+      svgStyle: {width: '100%', height: '100%'}
+    });
+    bar.svg.insertAdjacentHTML('afterbegin', Gradient);
+     bar.animate(1.0);
+
+    //  var Gradient = '<defs><linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1e5799"/><stop offset="50%" stop-color="#2989d8"/><stop offset="100%" stop-color="#7db9e8"/></linearGradient></defs>';
+     bar2 = new ProgressBar.Line(trythis2, {
+      strokeWidth: 4,
+      easing: 'linear',
+      duration: 1000,
+      color: 'url(#gradient)',
+      trailColor: 'rgba(0, 0, 0, 0.271)',
+      trailWidth: 4,
+      svgStyle: {width: '100%', height: '100%'}
+    });
+    // bar2.svg.insertAdjacentHTML('afterbegin', Gradient);
+    //  bar2.animate(1.0);
+
+    //  var Gradient = '<defs><linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1e5799"/><stop offset="50%" stop-color="#2989d8"/><stop offset="100%" stop-color="#7db9e8"/></linearGradient></defs>';
+     bar3 = new ProgressBar.Line(trythis3, {
+      strokeWidth: 4,
+      easing: 'linear',
+      duration: 1000,
+      color: 'url(#gradient)',
+      trailColor: 'rgba(0, 0, 0, 0.271)',
+      trailWidth: 4,
+      svgStyle: {width: '100%', height: '100%'}
+    });
+    // bar3.svg.insertAdjacentHTML('afterbegin', Gradient);
+    //  bar3.animate(0.2);
+
+    //  var Gradient = '<defs><linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1e5799"/><stop offset="50%" stop-color="#2989d8"/><stop offset="100%" stop-color="#7db9e8"/></linearGradient></defs>';
+     bar4 = new ProgressBar.Line(trythis4, {
+      strokeWidth: 4,
+      easing: 'linear',
+      duration: 1000,
+      color: 'url(#gradient)',
+      trailColor: 'rgba(0, 0, 0, 0.271)',
+      trailWidth: 4,
+      svgStyle: {width: '100%', height: '100%'}
+    });
+    // bar4.svg.insertAdjacentHTML('afterbegin', Gradient);
+    //  bar4.animate(1.0);
+
+    //  var Gradient = '<defs><linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1e5799"/><stop offset="50%" stop-color="#2989d8"/><stop offset="100%" stop-color="#7db9e8"/></linearGradient></defs>';
+     bar5 = new ProgressBar.Line(trythis5, {
+      strokeWidth: 4,
+      easing: 'linear',
+      duration: 1000,
+      color: 'url(#gradient)',
+      trailColor: 'rgba(0, 0, 0, 0.271)',
+      trailWidth: 4,
+      svgStyle: {width: '100%', height: '100%'}
+    });
+    // bar5.svg.insertAdjacentHTML('afterbegin', Gradient);
+    //  bar5.animate(1.0);
+
+    //  var Gradient = '<defs><linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1e5799"/><stop offset="50%" stop-color="#2989d8"/><stop offset="100%" stop-color="#7db9e8"/></linearGradient></defs>';
+     bar6 = new ProgressBar.Line(trythis6, {
+      strokeWidth: 4,
+      easing: 'linear',
+      duration: 1000,
+      color: 'url(#gradient)',
+      trailColor: 'rgba(96, 46, 48, 0.2)',
+      trailWidth: 4,
+      svgStyle: {width: '100%', height: '100%'}
+    });
+    bar6.svg.insertAdjacentHTML('afterbegin', Gradient);
+     bar6.animate(1.0);
+
+
+     bar7 = new ProgressBar.Line(trythiszirh, {
+      strokeWidth: 4,
+      easing: 'linear',
+      duration: 1000,
+      color: 'url(#gradient)',
+      trailColor: 'rgba(96, 46, 48, 0.2)',
+      trailWidth: 4,
+      svgStyle: {width: '100%', height: '100%'}
+    });
+    // bar7.svg.insertAdjacentHTML('afterbegin', Gradient);
+    // bar7.animate(1.0);
+
+    
+    bar8 = new ProgressBar.Line(weaponprog, {
+      strokeWidth: 1,
+      easing: 'linear',
+      duration: 1000,
+      color: 'url(#gradient)',
+      trailColor: 'rgba(96, 46, 48, 0.2)',
+      trailWidth: 1,
+      svgStyle: {width: '100%', height: '100%'}
+    });
+    // bar8.svg.insertAdjacentHTML('afterbegin', Gradient);
+    // bar8.animate(1.0);
+
+    var Gradient2 = '<defs><linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#54AEFE"/><stop offset="50%" stop-color="#54AEFE"/><stop offset="100%" stop-color="#54AEFE"/></linearGradient></defs>';
+
+    bar9 = new ProgressBar.Line(fulepro, {
+      strokeWidth: 1,
+      easing: 'linear',
+      duration: 1000,
+      color: 'url(#gradient2)',
+      trailColor: 'rgba(17, 17, 19, 0.5)',
+      trailWidth: 1,
+
+      svgStyle: {width: '100%', height: '100%',strokeLinecap: 'round'}
+    });
+    // bar9.svg.insertAdjacentHTML('afterbegin', Gradient2);
+    // bar9.animate(0.5);
+
+    bar10 = new ProgressBar.Line(vehiclerpom, {
+      strokeWidth: 1,
+      easing: 'linear',
+      duration: 1000,
+      color: 'url(#gradient)',
+      trailColor: 'rgba(17, 17, 19, 0.5)',
+      trailWidth: 1,
+
+      svgStyle: {width: '100%', height: '100%',strokeLinecap: 'round'}
+    });
+    // bar10.svg.insertAdjacentHTML('afterbegin', Gradient);
+    // bar10.animate(1.0);
+
+
+     bar11 = new ProgressBar.Line(whatisthisprogres, {
+    strokeWidth: 2,
+    easing: 'linear',
+    duration: 800,
+    color: 'url(#gradient)',
+    trailColor: 'rgba(17, 17, 19, 0.5)',
+    trailWidth: 2,
+
+    svgStyle: {width: '100%', height: '100%',strokeLinecap: 'round'}
+    });
+
+   var yuklendimi = false
+
+    window.addEventListener('message', function(e) {
+        if (e.data.message == "arachud"){
+            if (e.data.durum == "aktif"){
+                if (yuklendimi == false){
+                    $('.vehiclemain').css('display','block');
+                    $('#helpmanb').html(e.data.vehiclename);
+                    
+                    setTimeout(() => {
+                    // $('#helpmanb').css('display','none');
+                    $('.vehiclemainreel').fadeIn(0);
+                     }, 2000);
+                     setTimeout(() => {
+                    $('#helpmanb').css('display','block');
+               
+                     }, 500);
+                    setTimeout(() => {
+                     
+                        $('.vehiclemain').css('display','none');
+                      
+                        yuklendimi = true
+                        
+                    }, 2400);
+
+
+
+                }
+                    $('#vehiclekmhid').html(e.data.arachiz);
+                    bar9.svg.insertAdjacentHTML('afterbegin', Gradient2);
+                    $('#vitestype').html(e.data.vites);
+                    bar9.animate(e.data.aracbenzin / 100);
+                    bar10.svg.insertAdjacentHTML('afterbegin', Gradient);
+                    bar10.animate(e.data.rpm);
+
+
+                    if (e.data.aracfar.farkisa == 0 && e.data.aracfar.faruzunlar == 0)  {
+                        $('#headlightid').attr('src','vehicleicons/warning.svg');
+                    }else if (e.data.aracfar.farkisa == 1 && e.data.aracfar.faruzunlar == 0 || e.data.aracfar.farkisa == 0 && e.data.aracfar.faruzunlar == 1) {
+                        $('#headlightid').attr('src','vehicleicons/warningon1.svg');
+                    }else if (e.data.aracfar.farkisa == 1 && e.data.aracfar.faruzunlar == 1){
+                        $('#headlightid').attr('src','vehicleicons/warningon2.svg');
+                    }
+
+                    if (e.data.aracsabitmi) {
+                        $("#indicatorid").attr("src","vehicleicons/indicatoron.svg");
+                    }else{
+
+                        $("#indicatorid").attr("src","vehicleicons/indicator.svg");
+                    }
+
+
+                    if (e.data.vites > 0){
+                       if(e.data.arachiz > 100) {
+                        $('#bunevites').html('S');
+                       }else{
+                        $('#bunevites').html('D');
+                       }
+                    }else{
+                        $('#bunevites').html('R');
+                    }
+
+
+
+                    if (e.data.doorlock == 2){
+                        $("#lockerid").attr("src","vehicleicons/lockeron.svg");
+                    }else if (e.data.doorlock == 1){
+                        $("#lockerid").attr("src","vehicleicons/locker.svg");
+                    }
+
+                    if (e.data.vehicletyre){
+                        $("#tyreid").attr("src","vehicleicons/tyreon.svg");
+                    }else{
+                        $("#tyreid").attr("src","vehicleicons/tyre.svg");
+                    }
+
+                    if (e.data.vehicletyre){
+                        $("#tyreid").attr("src","vehicleicons/tyreon.svg");
+                    }else{
+                        $("#tyreid").attr("src","vehicleicons/tyre.svg");
+                    }
+                    
+                    if (e.data.araccan < 700){
+                        $("#crashid").attr("src","vehicleicons/crashon.svg");
+                    }else{
+                        $("#crashid").attr("src","vehicleicons/crash.svg");
+                    }
+                  
+            }else{
+                $('.vehiclemainreel').fadeOut(500);
+                yuklendimi = false
+            }
+        }
+
+        if (e.data.status == "updateStreet"){
+            
+            $('#streetball').html(e.data.street);
+        }
+
+        if (e.data.status == "updateClock"){
+           
+            $('.vehicletime').html(e.data.time);
+        }
+
+
+        if (e.data.status == "progresson"){
+           
+            $('.frhudprogressbarmain').fadeIn(500);
+            $('.frhudprogresstext').html(e.data.progtext)
+            
+
+          
+          
+            bar11.set(0.0)
+            bar11.svg.insertAdjacentHTML('afterbegin', Gradient);
+            bar11.animate(1.0, {
+                duration: e.data.progtime
+            }, function() {
+                $('.frhudprogressbarmain').fadeOut(500);
+                
+            });
+
+            // console.log(bar11.value())
+     
+            
+        }
+
+        if (e.data.message == "arackemer"){
+            if (e.data.kemerdurum == "aktif"){
+                $("#beltid").attr("src","vehicleicons/belton.svg");
+                
+            }else if(e.data.kemerdurum == "off"){
+                $("#beltid").attr("src","vehicleicons/belt.svg");
+            }
+        }
+
+        if (e.data.message == "oyuncuyemekhud"){
+            if (e.data.durm == "on"){
+                $('.rightplayerstatus').fadeIn(500);
+                
+                bar3.svg.insertAdjacentHTML('afterbegin', Gradient);
+             
+                bar3.animate(e.data.can / 100);
+                if (e.data.yelek > 0){
+                $('.progressclasszirh').fadeIn(500);
+                bar7.svg.insertAdjacentHTML('afterbegin', Gradient);
+                
+                bar7.animate(e.data.yelek / 100);
+                }else{
+                    $('.progressclasszirh').fadeOut(500);
+                    
+                }
+
+
+                bar4.svg.insertAdjacentHTML('afterbegin', Gradient);
+             
+                bar4.animate(e.data.aclik / 100);
+
+                bar5.svg.insertAdjacentHTML('afterbegin', Gradient);
+             
+                bar5.animate(e.data.susuzluk / 100);
+               
+                $('#tabihearth').html(e.data.can);
+                $('#tabishield').html(e.data.yelek);
+                $('#tabiburger').html(Math.round(e.data.aclik));
+                $('#tabiwater').html(Math.round(e.data.susuzluk));
+                $('#tabiid').html(e.data.playeridisi);
+                $('#energyid').html(e.data.playerstamina);
+                bar2.svg.insertAdjacentHTML('afterbegin', Gradient);
+             
+                 bar2.animate(e.data.playerstamina / 100);
+                
+               
+                
+                
+            }else if(e.data.durm == "off"){
+                $('.rightplayerstatus').fadeOut(500);
+            }
+        }
+
+
+        if (e.data.message == "weaponmod"){
+            if (e.data.stateweapon == "on"){
+                $('.gunmain').fadeIn(500);
+             
+                $("#weaponimageidmi").attr("src","weaponicons/"+e.data.weaponimg+'.png');
+                $('#weaponbullets').html(e.data.weaponbullet);
+                $('#weaponbulletsmax').html(e.data.maxweapon);
+                bar8.svg.insertAdjacentHTML('afterbegin', Gradient);
+             
+                bar8.animate(1.0);
+                
+            }else if(e.data.stateweapon == "off"){
+                $('.gunmain').fadeOut(500);
+            }
+        }
+
+
+        if (e.data.message == "notify"){
+            // console.log('help')
+            startnotify(e.data.type,e.data.text,e.data.length)
+        }
+       
+
+      
+    })
+
+    function startnotify(data1,data2,data3){
+        var $notification = CreateNotification(data1,data2,data3);
+        $('.notifymenu').append($notification);
+        // console.log(data3)
+        setTimeout(function() {
+            $.when($notification.fadeOut()).done(function() {
+                $notification.remove()
+            });
+        }, data3);
+    }
+
+
+    function CreateNotification(data1,data2,data3) {
+    
+
+        var $notification = $(document.createElement('div'));
+        $notification.addClass('notfiy').addClass(data1);
+
+
+        if (data1 === "success") {
+        var icon = "fas fa-check-circle"
+        } else if (data1 === "inform") {
+        var icon = "fas fa-info-circle"
+        } else if (data1 === "error") {
+        var icon = "fas fa-exclamation-triangle"
+       
+        }
+       
+           
+        $notification.html('\
+        <div class="notfiyicon"><i class="'+icon+'"></i></div>\
+        <div class="notfiytext"><span style="text-align: center; display:block; margin-top: 10px;">'+data2+'</span></div>');
+        $notification.fadeIn();
+        // if (data.style !== undefined) {
+        //     Object.keys(data.style).forEach(function(css) {
+        //         $notification.css(css, data.style[css])
+        //     });
+        // }
+
+
+      return $notification;
+   }
+
+</script>
+
+</html>

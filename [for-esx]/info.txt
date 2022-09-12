@@ -1,0 +1,9 @@
+ 
+----------Progress Event
+
+TriggerEvent('els_frhud:progress', text, time)
+
+
+----------Notify Event
+
+ TriggerEvent('els_frhud:client:notifyon', style, text, time) >>> style === inform,error,success
